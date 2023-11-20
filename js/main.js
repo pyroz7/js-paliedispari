@@ -1,29 +1,20 @@
 //CHIEDERE ALL'UTENTE DI INSERIRE UNA PAROLA
 
-let word = prompt("parola"); 
+let parolaUtente = prompt("Inserisci parola"); 
  
 //CREARE UNA FUNZIONE PER VERIFICARE SE LA PAROLA è PALINDROMA
 
-function palindrome () {
-      let resulte = parola.reverse();
+let parolaReverse = reverseParola(parolaUtente);
 
-      if (parola == resulte) {
-        return parola + "è palindroma";
-      }
-
-      else 
-      return parola + "non è palindroma"
-
-
-
-
-
-
-
-
-
-
+if(parolaUtente== parolaReverse){
+    console.log("La parola è palindroma")
+} else {
+    console.log("La parola non è palindroma")
 
 }
 
+function reverseParola(str) {
+    let strReverse = str.split("").reverse().join("");
+    return strReverse;
+}
  
